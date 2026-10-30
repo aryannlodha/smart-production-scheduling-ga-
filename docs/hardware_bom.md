@@ -5,7 +5,7 @@
 The hardware prototype is a physical control panel and indicator station representing 3 shop floor machines ($M_1, M_2, M_3$). It demonstrates real-time human-in-the-loop interaction and cyber-physical communication with the scheduling engine.
 
 > [!IMPORTANT]
-> **Approval Notice**: This document is an engineering recommendation for team review. **Do not make any purchases** until the team and project guide have finalized and approved the budget.
+> **Approval Notice**: This document is an engineering recommendation for budget estimation. Verify pricing and availability before procurement.
 
 ---
 
@@ -30,7 +30,7 @@ The hardware prototype is a physical control panel and indicator station represe
 ## 3. Budget Summary
 
 - **Total Estimated Hardware Cost**: **₹1,150 – ₹1,450 INR** (~$14 – $18 USD)
-- **Shared Team Cost (3 Members)**: **~₹380 – ₹480 INR per student**
+- **Component Availability**: Readily available at Indian electronics suppliers (Robu, MakerBazar, Amazon India).
 
 ---
 

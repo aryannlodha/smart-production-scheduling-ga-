@@ -1,6 +1,6 @@
 # Demonstration Checklist for Professor Evaluation
 
-This checklist provides a structured, fail-safe guide for the 3-member team to demonstrate the **Smart Production Scheduling & Dynamic Rescheduling System** during lab assessments, viva examinations, and project evaluations.
+This checklist provides a structured, fail-safe guide to demonstrate the **Smart Production Scheduling & Dynamic Rescheduling System** during lab assessments, viva examinations, and project evaluations.
 
 ---
 

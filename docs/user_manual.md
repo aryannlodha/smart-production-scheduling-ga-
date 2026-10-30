@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 
-This manual guides the student team through running and demonstrating the **Smart Production Scheduling and Dynamic Rescheduling System**. The application can be operated either in **Full Hardware-in-the-Loop Mode** (with ESP32 connected) or in **Software-Only Demonstration Mode** (using only the laptop).
+This manual provides complete instructions for running and demonstrating the **Smart Production Scheduling and Dynamic Rescheduling System**. The application can be operated either in **Full Hardware-in-the-Loop Mode** (with ESP32 connected) or in **Software-Only Demonstration Mode** (using only the laptop).
 
 ---
 

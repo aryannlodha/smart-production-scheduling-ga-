@@ -139,40 +139,30 @@ Open your browser at `http://localhost:8501`.
     ├── user_manual.md             # Complete dashboard demonstration walkthrough
     ├── experiment_plan.md         # Benchmarking methodology & empirical study plan
     ├── literature_review.md       # Literature review, citations & research scope
-    └── team_work_distribution.md  # 3-member team role matrix & timeline
+    ├── demonstration_checklist.md # Demonstration verification checklist & viva Q&A
+    ├── final_report_outline.md    # Comprehensive academic report outline
+    └── final_presentation_outline.md # Presentation structure and technical walkthrough scripts
 ```
 
 ---
 
-## 🔌 Hardware Demonstration (ESP32)
+## 📊 Benchmark Experimental Performance
 
-```
-       ESP32 DevKit V1                 Breadboard Circuit
-     +-----------------+          +---------------------------+
-     |  GPIO 25, 26    |--------->| M1 Status LEDs (Green/Red)|
-     |  GPIO 27, 14    |--------->| M2 Status LEDs (Green/Red)|
-     |  GPIO 12, 13    |--------->| M3 Status LEDs (Green/Red)|
-     |  GPIO 32, 33    |<---------| Start & Reset Buttons     |
-     |  GPIO 34, 35, 36|<---------| M1, M2, M3 Break Buttons  |
-     |  GPIO 21, 22    |--------->| SSD1306 I2C OLED Display  |
-     +-----------------+          +---------------------------+
-               │
-               ▼ (Micro-USB Cable, 115200 Baud JSON)
-         Host Laptop (Python Engine + Streamlit Dashboard)
-```
+The system was evaluated on a benchmark Job Shop Scheduling problem (8 jobs, 3 machines, 18 operations). Quantitative results produced by the scheduling engine (`run_experiments.py`):
 
-- Complete wiring schematics and assembly steps are provided in [`docs/wiring_and_assembly.md`](docs/wiring_and_assembly.md).
-- Detailed component pricing (~₹1,150 – ₹1,450 INR) is provided in [`docs/hardware_bom.md`](docs/hardware_bom.md).
+| Scheduling Method | Makespan ($C_{\max}$) | Total Tardiness | Avg Machine Utilization | Total Idle Time | Computation Time |
+|:-----------------:|:--------------------:|:---------------:|:-----------------------:|:---------------:|:----------------:|
+| **FCFS** | 41.0 | 0.0 | 70.7% | 36.0 | 0.0003 s |
+| **SPT** | 42.0 | 2.0 | 69.0% | 39.0 | 0.0002 s |
+| **EDD** | 42.0 | 0.0 | 69.0% | 39.0 | 0.0002 s |
+| **Genetic Algorithm (GA)** | **38.0** | **0.0** | **76.3%** | **27.0** | **0.5531 s** |
 
----
-
-## 👥 Three-Member Team Responsibilities
-
-- **Member 1 (Operations Management & OR Modeling)**: Problem formulation, benchmark datasets, baseline dispatching heuristics (FCFS, SPT, EDD), KPI analysis, and literature review.
-- **Member 2 (Python & Genetic Algorithm Optimization)**: Chromosome decoder, GA operators (POX, swap mutation), dynamic rescheduling engine, automated testing, and web dashboard.
-- **Member 3 (Embedded Systems & Hardware Integration)**: Breadboard circuit assembly, pull-up resistors configuration, ESP32 firmware development, and serial JSON protocol integration.
-
-Detailed breakdown available in [`docs/team_work_distribution.md`](docs/team_work_distribution.md).
+### Dynamic Breakdown Rescheduling Evaluation
+Under an unexpected machine failure scenario (Machine 1 down at $t=10.0$ with an 8.0-unit repair window):
+- **Completed Work**: All operations completed prior to $t=10$ are permanently locked and preserved.
+- **Unaffected Workstations**: Operations on $M_2$ and $M_3$ continue uninterrupted.
+- **Interrupted Operation**: Operation on $M_1$ is paused and resumes after repair with remaining time.
+- **Rescheduled Result**: GA recalculates pending operations in **0.147 seconds**, shifting makespan from 38.0 to 42.0 (+10.5%).
 
 ---
 

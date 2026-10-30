@@ -8,7 +8,7 @@
 ### Cover Page & Front Matter
 - **Title**: Smart Production Scheduling and Dynamic Rescheduling Using Genetic Algorithm: A Physical Prototype-Based Approach
 - **Course**: Operations Management / Production Planning and Control (PBL)
-- **Team Members**: [Student 1 Name & Roll No.], [Student 2 Name & Roll No.], [Student 3 Name & Roll No.]
+- **Author / Project Details**: [Project Submission Details]
 - **Supervisor / Project Guide**: [Professor / Faculty Advisor Name]
 - **Department & Institution**: Department of Industrial Engineering & Management, [University Name]
 - **Date / Academic Year**: [Academic Year 2025–2026]
@@ -107,9 +107,9 @@
 
 ---
 
-### Chapter 7: Conclusions, Team Reflections & Future Work
+### Chapter 7: Conclusions, Reflections & Future Work
 - **7.1 Project Conclusions**: Synthesis of findings; validation of GA metaheuristic and physical demonstration concept.
-- **7.2 Team Work Distribution & Individual Contributions**: Member 1 (OM & Math), Member 2 (Python & GA), Member 3 (Hardware & Firmware).
+- **7.2 Engineering Implementation Review**: Synthesis of mathematical modeling, algorithmic optimization, and hardware integration.
 - **7.3 Operational Limitations**: Assumptions regarding deterministic processing and fixed routing.
 - **7.4 Future Recommendations**: Extension to Flexible Job Shop Scheduling ($FJSP$), automated machine sensor feedback, and reinforcement learning reschedulers.
 
