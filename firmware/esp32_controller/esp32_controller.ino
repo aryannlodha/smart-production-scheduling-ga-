@@ -154,6 +154,11 @@ void setupPins() {
   pinMode(BTN_M1_BREAK, INPUT);  // Needs external pull-up
   pinMode(BTN_M2_BREAK, INPUT);  // Needs external pull-up
   pinMode(BTN_M3_BREAK, INPUT);  // Needs external pull-up
+
+  // Initialize button states to current physical pin read to prevent false triggers on boot
+  for (int i = 0; i < 5; i++) {
+    buttons[i].lastState = digitalRead(buttons[i].pin);
+  }
 }
 
 // ===== OLED Setup =====
@@ -161,6 +166,7 @@ void setupOLED() {
   Wire.begin(OLED_SDA, OLED_SCL);
   if (display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDR)) {
     oledAvailable = true;
+    Serial.println(F("[OLED] Initialized successfully (0x3C)"));
     display.clearDisplay();
     display.setTextSize(1);
     display.setTextColor(SSD1306_WHITE);
@@ -170,6 +176,8 @@ void setupOLED() {
     display.println();
     display.println("Initializing...");
     display.display();
+  } else {
+    Serial.println(F("[OLED] Warning: SSD1306 allocation failed or not found at 0x3C"));
   }
 }
 
