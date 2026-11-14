@@ -1,0 +1,7 @@
+[wokwi]
+version = 1
+firmware = "../esp32_controller/esp32_controller.ino"
+elf = ""
+
+# Wokwi simulation configuration
+# This file maps the firmware to the virtual circuit defined in diagram.json
